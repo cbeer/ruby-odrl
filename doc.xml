@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<o-ex:rights xmlns:o-ex="http://odrl.net/1.1/ODRL-EX"
+			xmlns:o-dd="http://odrl.net/1.1/ODRL-DD"
+			xmlns:mpeg7="http://www.mpeg7.org/2001/MPEG-7_Schema">
+	<o-ex:context>
+		<o-dd:uid>doi:/voucher/383838383</o-dd:uid>
+		<o-dd:name>The Voucher for XML: The Movie</o-dd:name>
+		<o-dd:dLocation>http://example.com/odrl/383838383.xml</o-dd:dLocation>
+	</o-ex:context>
+	<o-ex:offer>
+		<o-ex:asset>
+			<o-ex:context>
+				<o-dd:uid>doi:0.9999999/video/383838383</o-dd:uid>
+				<o-dd:name>XML: The Movie</o-dd:name>
+			</o-ex:context>
+		</o-ex:asset>
+		<o-ex:party>
+			<o-ex:context>
+				<o-dd:uid>x500:c=IT;o=Registry;cn=MassimoCanale</o-dd:uid>
+			</o-ex:context>
+			<o-ex:rightsholder>
+				<o-dd:percentage>75</o-dd:percentage>
+			</o-ex:rightsholder>
+		</o-ex:party>
+		<o-ex:party>
+			<o-ex:context>
+				<o-dd:uid>x500:c=IT;o=Registry;cn=SimonaCanale</o-dd:uid>
+			</o-ex:context>
+			<o-ex:rightsholder>
+				<o-dd:percentage>25</o-dd:percentage>
+			</o-ex:rightsholder>
+			<o-ex:party>
+				<o-ex:context>
+					<o-dd:uid>x500:c=IT;o=Registry;cn=MariaCanale</o-dd:uid>
+				</o-ex:context>
+				<o-ex:rightsholder>
+					<o-dd:percentage>10</o-dd:percentage>
+				</o-ex:rightsholder>
+			</o-ex:party>
+		</o-ex:party>
+		<o-ex:permission>
+			<o-dd:play>
+				<o-ex:constraint>
+					<o-dd:quality o-ex:type="mpeg7:resolution">
+						<o-ex:constraint>
+							<o-dd:range>
+								<o-dd:max>30</o-dd:max>
+							</o-dd:range>
+						</o-ex:constraint>
+					</o-dd:quality>
+				</o-ex:constraint>
+				<o-ex:requirement>
+					<o-dd:peruse>
+						<o-dd:payment>
+							<o-dd:amount o-dd:currency="ITL">1000.00</o-dd:amount>
+						</o-dd:payment>
+					</o-dd:peruse>
+				</o-ex:requirement>
+			</o-dd:play>
+			<o-dd:play>
+				<o-ex:constraint>
+					<o-dd:quality o-ex:type="mpeg7:resolution">
+						<o-ex:constraint>
+							<o-dd:range>
+								<o-dd:max>90.0</o-dd:max>
+							</o-dd:range>
+						</o-ex:constraint>
+					</o-dd:quality>
+				</o-ex:constraint>
+				<o-ex:requirement>
+					<o-dd:peruse>
+						<o-dd:payment>
+							<o-dd:amount o-dd:currency="ITL">5000.00</o-dd:amount>
+						</o-dd:payment>
+					</o-dd:peruse>
+				</o-ex:requirement>
+			</o-dd:play>
+		</o-ex:permission>
+	</o-ex:offer>
+</o-ex:rights>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<o-ex:rights  xmlns:o-ex="http://odrl.net/1.1/ODRL-EX" xmlns:o-dd="http://odrl.net/1.1/ODRL-DD">
+    <o-ex:offer>
+        <o-ex:asset>
+            <o-ex:context>
+                <o-dd:dLocation>.*</o-dd:dLocation>
+            </o-ex:context>
+        </o-ex:asset>
+        <o-ex:permission>
+	    	<o-dd:display></o-dd:display>
+            <o-dd:play></o-dd:play>
+            <o-dd:save></o-dd:save>
+	    	<o-dd:annotate></o-dd:annotate>
+        </o-ex:permission>
+    </o-ex:offer>
+</o-ex:rights>
