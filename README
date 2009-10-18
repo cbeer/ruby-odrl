@@ -1,0 +1,15 @@
+ruby-odrl is a ruby library for creating and evaluating Open Digital Rights Language (<http://odrl.net>) documents as a policy decision point.
+
+USAGE
+
+[TODO]
+
+INSTALLATION
+
+[TODO]
+
+AUTHORS
+
+Chris Beer <chris_beer@wgbh.org>
+
+Please send bugs, requests and comments to the authors.
