@@ -1,4 +1,4 @@
-require 'nokogiri'
+#require 'nokogiri'
 require 'uuid'
 
 $uuid = UUID.new
@@ -18,3 +18,4 @@ require File.dirname(__FILE__) + "/constraint"
 require File.dirname(__FILE__) + "/permission"
 require File.dirname(__FILE__) + "/offer"
 require File.dirname(__FILE__) + "/document"
+require File.dirname(__FILE__) + "/exceptions"

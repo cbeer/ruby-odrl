@@ -11,7 +11,7 @@ module ODRL::Rights::Constraint
 	   @xml = c
 	   @constraint = []
 
-	   @context = ODRL::Rights::Context.from_xml @xml.xpath('o-dd:context')
+	   @context = ODRL::Rights::Context.from_xml @xml.xpath('o-ex:context').first
 
 	   c.xpath('o-ex:constraint/*', 'o-ex' => 'http://odrl.net/1.1/ODRL-EX').each do |c1|
               constraint = Base.factory(c1, c)

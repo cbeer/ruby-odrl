@@ -18,7 +18,7 @@ module ODRL::Rights
          @offer.each do |o|
 	   return true if o.eval permission, asset, party, context
 	 end
-	 false
+	 raise InsufficientPrivileges
       end
       
       def to_xml
