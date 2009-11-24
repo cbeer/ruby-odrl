@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<o-ex:rights  xmlns:o-ex="http://odrl.net/1.1/ODRL-EX" xmlns:o-dd="http://odrl.net/1.1/ODRL-DD">
+    <o-ex:offer>
+        <o-ex:asset>
+            <o-ex:context>
+                <o-dd:dLocation>.*</o-dd:dLocation>
+            </o-ex:context>
+        </o-ex:asset>
+        <o-ex:permission>
+            <o-dd:play>
+                <o-ex:constraint>
+			<o-dd:individual>
+				<o-ex:context>
+					<o-dd:industry>Public Broadcasting</o-dd:industry>
+				</o-ex:context>
+			</o-dd:individual>
+                </o-ex:constraint>
+            </o-dd:play>
+            <o-dd:play>
+                <o-ex:constraint>
+			<o-dd:individual>
+				<o-ex:context>
+					<o-dd:industry>Academia</o-dd:industry>
+				</o-ex:context>
+			</o-dd:individual>
+                </o-ex:constraint>
+            </o-dd:play>
+        </o-ex:permission>
+    </o-ex:offer>
+</o-ex:rights>

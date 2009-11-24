@@ -18,6 +18,9 @@ class ODRLTest < Test::Unit::TestCase
 		def groups
 			['test1', 'test']
 		end
+		def industry
+			'Public Broadcasting'
+		end
 	end
 	class UserWBUR
 		def name
@@ -33,6 +36,16 @@ class ODRLTest < Test::Unit::TestCase
 		end
 		def groups
 			[]
+		end
+	end
+	class UserScholar
+		def industry
+			'Academia'
+		end
+	end
+	class UserFan
+		def industry
+			'Fan'
 		end
 	end
   def test_simple
@@ -63,6 +76,15 @@ class ODRLTest < Test::Unit::TestCase
     assert_equal true, rights.eval('display', nil, nil, nil)
     assert_equal true, rights.eval('annotate', nil, nil, nil)
     assert_equal true, rights.eval('save', nil, nil, nil)
+  end
+  def test_access_requirements
+    rights = ODRL::Rights::Document.new
+    d = open(File.join(File.dirname(__FILE__), 'access_register.xml')).read
+    rights.doc = d
+    assert_raises ODRL::Rights::InsufficientPrivileges do
+     rights.eval('play', nil, nil, nil)
+    end
+    rights.eval('play', nil, {}, nil)
   end
   def test_access_constraints
     rights = ODRL::Rights::Document.new
@@ -95,6 +117,17 @@ class ODRLTest < Test::Unit::TestCase
     assert_equal true, rights.eval('play', nil, UserWBUR.new, nil)
     assert_raises ODRL::Rights::InsufficientPrivileges do
     	rights.eval('play', nil, UserWKAR.new, nil)
+    end
+  end
+  def test_access_industry
+    rights = ODRL::Rights::Document.new
+    d = open(File.join(File.dirname(__FILE__), 'access_industry.xml')).read
+    rights.doc = d
+
+    assert_equal true, rights.eval('play', nil, UserWGBH.new, nil)
+    assert_equal true, rights.eval('play', nil, UserScholar.new, nil)
+    assert_raises ODRL::Rights::InsufficientPrivileges do
+    	rights.eval('play', nil, UserFan.new, nil)
     end
   end
   def test_count
