@@ -2,11 +2,9 @@ ruby-odrl is a ruby library for creating and evaluating Open Digital Rights Lang
 
 USAGE
 
-[TODO]
+This library provides a framework for the parsing and evaluation of ODRL XML documents. Support for non-XML documents may happen in the future. This library, however, does not provide an out-of-the-box solution for rights management -- to implement the library, you must develop the inputs to the decision engine, which includes the user/party implementation, policy execution, and error handling. Finally, instead of returning a binary policy decision, this library uses exceptions to communicate back error messages (which may be caught by implementors to provide contextually relevant errors and actions).
 
-INSTALLATION
-
-[TODO]
+Example implementations are provided in the examples/ directory, which includes a very basic Blacklight integration.
 
 AUTHORS
 
